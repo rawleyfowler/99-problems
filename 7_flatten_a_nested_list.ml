@@ -3,7 +3,7 @@ type 'a node =
   | Many of 'a node list;;
 
 (* My solution *)
-let rec flatten lst =
+let rec flatten lst = 
   let rec aux acc = function
     | [] -> acc
     | Many a :: t -> aux (acc @ (flatten a)) t
